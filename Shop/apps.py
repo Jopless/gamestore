@@ -1,10 +1,6 @@
-from django.contrib import admin
-from Shop.models import Game
+from django.apps import AppConfig
 
-# Register your models here.
 
-class GameAdmin(admin.ModelAdmin):
-    list_display = ('title', 'price', 'id')
-    list_display_links = ('title',)
-
-admin.site.register(Game, GameAdmin)
+class ShopConfig(AppConfig):
+    name = 'Shop'
+    verbose_name = 'Каталог'
