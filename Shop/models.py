@@ -16,6 +16,7 @@ class Game(models.Model):
     description = models.TextField(blank=False, null=True, verbose_name="Описание игры")
     rating = models.CharField(max_length=1, choices=game_rate)
     image = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True, verbose_name="Фото")
+    is_published = models.BooleanField(default=True)
 
     class Meta:
         verbose_name = 'Игра'
