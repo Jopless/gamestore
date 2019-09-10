@@ -4,11 +4,22 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/master/LICENSE)
  */
 body {
-  padding-top: 70px;
+  padding-top: 60px;
 }
 
 .logo > img {
-    padding: 3px;
-    width: 70px;
+    width: 40px;
+    float: left;
+    padding-top: 5px;
 }
 
+.logo > h1 {
+    color: white;
+    float: right;
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+
+.list-group {
+    padding-top: 25px;
+}
