@@ -12,5 +12,6 @@ from Shop.models import Game
 
 
 def index(request):  # Checking homepage
+    games = Game.objects.all()
     if request.method == 'GET':
-        return render(request, 'index.html')
+        return render(request, 'index.html', {"games": games})
