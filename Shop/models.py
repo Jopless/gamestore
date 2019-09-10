@@ -15,7 +15,7 @@ class Game(models.Model):
     price = models.FloatField(null=False, blank=False, unique=False, verbose_name="Цена")
     description = models.TextField(blank=False, null=True, verbose_name="Описание игры")
     rating = models.CharField(max_length=1, choices=game_rate)
-    image = models.ImageField(upload_to='Shop/photos', default='', blank=False, verbose_name='Фото')
+    image = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True, verbose_name="Фото")
 
     class Meta:
         verbose_name = 'Игра'
