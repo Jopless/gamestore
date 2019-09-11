@@ -82,7 +82,6 @@ DATABASES = {
         'USER': 'game_user',
         'PASSWORD': 'qwe123qwer',
         'HOST': 'localhost'
-
     }
 }
 
