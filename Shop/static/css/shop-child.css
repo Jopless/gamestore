@@ -1,3 +1,8 @@
 .game-info {
     padding-top: 25px;
 }
+
+.game-info img {
+    vertical-align: middle;
+    height: 400px;
+}

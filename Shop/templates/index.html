@@ -33,13 +33,12 @@
 <!---->   {% for game in games %}
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-             <img class="card-img-top" src={{game.image.url}} alt="">
+             <img class="card-img-top" style="width:250px;height:250px;" src={{game.image.url}} alt="">
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="{% url 'game_page' game.id %}">{{game.title}}</a>
                 </h4>
-                <h5>{{game.price}}</h5>
-                <p class="card-text">{{game.description}}</p>
+                <h5>₴{{game.price}}</h5>
               </div>
               <div class="card-footer">
                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
