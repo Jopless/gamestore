@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts.apps.AccountsConfig',  # added accounts app
     'Shop.apps.ShopConfig',  # added shop app
     'django.contrib.admin',
     'django.contrib.auth',
@@ -81,6 +82,7 @@ DATABASES = {
         'USER': 'game_user',
         'PASSWORD': 'qwe123qwer',
         'HOST': 'localhost'
+
     }
 }
 
