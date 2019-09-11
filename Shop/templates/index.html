@@ -36,7 +36,7 @@
              <img class="card-img-top" src={{game.image.url}} alt="">
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">{{game.title}}</a>
+                  <a href="{% url 'game_page' game.id %}">{{game.title}}</a>
                 </h4>
                 <h5>{{game.price}}</h5>
                 <p class="card-text">{{game.description}}</p>
