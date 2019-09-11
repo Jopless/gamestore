@@ -13,11 +13,15 @@ from Shop.models import Game
 
 def index(request):  # Checking homepage
     games = Game.objects.all().filter(is_published=True)
+    context = {
+        'games' : games,
+        'nav' : 'index'
+    }
     if request.method == 'GET':
-        return render(request, 'index.html', {"games": games})
+        return render(request, 'index.html', context)
 
 
-def game_page(request, game_id):
+def game_page(request, game_id): # Products page
     game_page = get_object_or_404(Game, pk=game_id)
     context = {
         'game_page' : game_page
