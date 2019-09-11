@@ -38,8 +38,8 @@
                 <h4 class="card-title">
                   <a href="{% url 'game_page' game.id %}">{{game.title}}</a>
                 </h4>
-                <h5>{{game.price}}</h5>
-                <p class="card-text">{{game.description}}</p>
+                <h5>₴{{game.price}}</h5>
+                <a href="{% url 'game_page' game.id %}"><button type="button" class="btn btn-outline-dark">More...</button></a>
               </div>
               <div class="card-footer">
                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
