@@ -27,3 +27,7 @@ body {
 .game-info {
     padding-top: 25px;
 }
+
+.row img {
+    height: 350px;
+}
