@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<h1>News!</h1>
 <div class="news-info">
     {% for new in news %}
         <div class="card">
@@ -9,7 +10,7 @@
             <h3 class="card-title">{{ new.title }}</h3>
             <h6 class="text-muted">Publish date: {{ new.publish_date }}</h6>
             <p class="card-text">{{ new.text }}</p>
-            <a href="#" class="btn btn-primary">More...</a>
+            <a href="{% url 'news_page' new.id %}" class="btn btn-primary">More...</a>
           </div>
         </div>
         <br>
