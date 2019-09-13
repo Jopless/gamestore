@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="news-info">
+    {% for new in news %}
+        <div class="card">
+          <img src="{{ new.image.url }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h3 class="card-title">{{ new.title }}</h3>
+            <h6 class="text-muted">Publish date: {{ new.publish_date }}</h6>
+            <p class="card-text">{{ new.text }}</p>
+            <a href="#" class="btn btn-primary">More...</a>
+          </div>
+        </div>
+        <br>
+    {% endfor %}
+</div>
+{% endblock %}

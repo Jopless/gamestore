@@ -18,7 +18,7 @@ def index(request):  # Checking homepage
         'nav' : 'index'
     }
     if request.method == 'GET':
-        return render(request, 'index.html', context)
+        return render(request, 'Shop/index.html', context)
 
 
 def game_page(request, game_id): # Products page
@@ -26,5 +26,5 @@ def game_page(request, game_id): # Products page
     context = {
         'game_page' : game_page
     }
-    return render(request, 'game_page.html', context)
+    return render(request, 'Shop/game_page.html', context)
 
