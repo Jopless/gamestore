@@ -11,14 +11,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item {% if nav == 'index' %} active {% endif %}">
+                <li class="nav-item {% if 'login' in request.path %} active {% endif %}">
+                    <a class="nav-link" href="{% url 'login' %}">Sign Up</a>
+                </li>
+                <li class="nav-item {% if 'games' in request.path %} active {% endif %}">
                     <a class="nav-link" href="{% url 'index' %}">Home</a>
                 </li>
-                <li class="nav-item {% if nav == 'news' %} active {% endif %}">
+                <li class="nav-item {% if 'news' in request.path %} active {% endif %}">
                     <a class="nav-link" href="{% url 'news' %}">News</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sign Up</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">About</a>

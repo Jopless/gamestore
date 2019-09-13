@@ -27,15 +27,7 @@
 <div class="container">
 
     <div class="row">
-
-        <div class="col-lg-3">
-        {% if '/games' in request.path %}
-            <div class="list-group">
-                <a href="#" class="list-group-item">Adventure</a>
-                <a href="#" class="list-group-item">Racing</a>
-                <a href="#" class="list-group-item">Shooting</a>
-            </div>
-        {% endif %}
+        {% include 'partials/_categories_menu.html' %}
         </div>
         <!-- /.col-lg-3 -->
         <!--Main content-->
