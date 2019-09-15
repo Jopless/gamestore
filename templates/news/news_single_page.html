@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="game-info">
+                <img src="{{ news_page.image.url }}" alt="">
+                <h1>{{ news_page.title }}</h1>
+                <p><b>Description: </b>{{ news_page.text }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
