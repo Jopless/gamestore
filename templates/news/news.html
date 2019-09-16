@@ -1,19 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>News!</h1>
-<div class="news-info">
+<div class="container">
+    <div class="news-info">
     {% for new in news %}
         <div class="card">
           <img src="{{ new.image.url }}" class="card-img-top" alt="...">
           <div class="card-body">
             <h3 class="card-title">{{ new.title }}</h3>
             <h6 class="text-muted">Publish date: {{ new.publish_date }}</h6>
-            <p class="card-text">{{ new.text }}</p>
-            <a href="{% url 'news_page' new.id %}" class="btn btn-primary">More...</a>
+            <p class="card-text">{{ new.text|truncatechars:100 }}</p>
+            <a href="{% url 'news_page' new.id %}" class="btn btn-primary">Read more...</a>
           </div>
         </div>
         <br>
     {% endfor %}
+    </div>
 </div>
 {% endblock %}
