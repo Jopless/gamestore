@@ -14,18 +14,20 @@
 
                 <ul class="navbar-nav ml-auto">
                     {% if user.is_authenticated %}
-                        <li class="nav-item {% if 'name' in request.path %} active {% endif %}">
-                            <button type="button" class="btn btn-success">Welcome, {{ user.username }}</button>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
-                        </li>
+                        <div class="dropdown">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Welcome, {{ user.username }}
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                          </div>
+                        </div>
                     {% else %}
                         <li class="nav-item {% if 'login' in request.path %} active {% endif %}">
                             <a class="nav-link" href="{% url 'login' %}">Login</a>
                         </li>
                     {% endif %}
-                    <li class="nav-item {% if 'index' == 'index' %} active {% endif %}">
+                    <li class="nav-item {% if 'index' in request.path %} active {% endif %}">
                         <a class="nav-link" href="{% url 'index' %}">Home</a>
                     </li>
                     <li class="nav-item {% if 'news' in request.path %} active {% endif %}">
