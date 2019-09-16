@@ -1,14 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from Shop.models import Game
-
-# Create your views here.
-
-# Testing models
-# def get_games(request):
-#     if request.method == 'GET':
-#         game = Game.objects.all()[0]
-#         return HttpResponse(str(game.title) + " UAH" + str(game.price))
 
 
 def index(request):  # Checking homepage
@@ -17,8 +9,7 @@ def index(request):  # Checking homepage
         'games' : games,
         'nav' : 'index'
     }
-    if request.method == 'GET':
-        return render(request, 'Shop/index.html', context)
+    return render(request, 'Shop/index.html', context)
 
 
 def game_page(request, game_id): # Products page

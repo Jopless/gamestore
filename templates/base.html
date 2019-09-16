@@ -24,28 +24,20 @@
 {% include 'partials/_navbar.html' %}
 
 <!-- Page Content -->
-<div class="container">
 
-    <div class="row">
-        {% include 'partials/_categories_menu.html' %}
-        </div>
         <!-- /.col-lg-3 -->
         <!--Main content-->
         {% block content %}
         {% endblock %}
         <!-- /.row -->
 
-    </div>
-</div>
-    <!-- /.container -->
 
+    <!-- /.container -->
     <!-- Footer -->
 {% include 'partials/_footer.html' %}
-
     <!-- Bootstrap core JavaScript -->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-</div>
 </body>
 
 </html>

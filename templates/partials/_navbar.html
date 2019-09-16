@@ -15,14 +15,17 @@
                 <ul class="navbar-nav ml-auto">
                     {% if user.is_authenticated %}
                         <li class="nav-item {% if 'name' in request.path %} active {% endif %}">
-                            <a class="nav-link" href="{% url 'index' %}">Welcome {{ user.username }}</a>
-                        <li>
+                            <button type="button" class="btn btn-success">Welcome, {{ user.username }}</button>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                        </li>
                     {% else %}
                         <li class="nav-item {% if 'login' in request.path %} active {% endif %}">
-                            <a class="nav-link" href="{% url 'login' %}">Sign Up</a>
+                            <a class="nav-link" href="{% url 'login' %}">Login</a>
                         </li>
                     {% endif %}
-                    <li class="nav-item {% if 'games' in request.path %} active {% endif %}">
+                    <li class="nav-item {% if 'index' == 'index' %} active {% endif %}">
                         <a class="nav-link" href="{% url 'index' %}">Home</a>
                     </li>
                     <li class="nav-item {% if 'news' in request.path %} active {% endif %}">
