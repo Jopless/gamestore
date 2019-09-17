@@ -4,6 +4,10 @@ from django.shortcuts import render, redirect
 from .forms import ContactForm
 
 
+def socbutton(request):
+    return render(request, 'contacts/socialbutton.html')
+
+
 def view_email(request):
     if request.method == 'GET':
         form = ContactForm()
