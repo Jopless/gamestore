@@ -33,12 +33,15 @@
                     <li class="nav-item {% if 'news' in request.path %} active {% endif %}">
                         <a class="nav-link" href="{% url 'news' %}">News</a>
                     </li>
+                     <li class="nav-item {% if 'links' in request.path %} active {% endif %}">
+                        <a class="nav-link" href="{% url 'links' %}">Links</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                 </li>
+                    <li class="nav-item {% if 'contact' in request.path %} active {% endif %}">
+                        <a class="nav-link" href="{% url 'email' %}">Contact Me</a>
+                    </li>
             </ul>
         </div>
     </div>

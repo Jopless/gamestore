@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'contacts.apps.ContactsConfig',  # added contacts app
     'news.apps.NewsConfig',
     'accounts.apps.AccountsConfig',  # added accounts app
     'Shop.apps.ShopConfig',  # added shop app
@@ -80,8 +81,8 @@ WSGI_APPLICATION = 'GameStore.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gamestore_new',
-        'USER': 'artem',
+        'NAME': 'gamestore',
+        'USER': 'game_user',
         'PASSWORD': 'qwe123qwer',
         'HOST': 'localhost'
     }
@@ -132,3 +133,9 @@ MEDIA_URL = '/media/'
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'index'
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'jopless11@gmail.com'
+EMAIL_HOST_PASSWORD = 'qwe123qwer'

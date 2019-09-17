@@ -3,6 +3,7 @@ from news.models import News
 
 # Create your views here.
 
+
 def news_index(request):
     news = News.objects.all().filter(is_published=True)
     context = {
@@ -10,6 +11,7 @@ def news_index(request):
         'nav' : 'news'
     }
     return render(request, 'news/news.html', context)
+
 
 def news_page(request, news_id):
     news_page = get_object_or_404(News, pk=news_id)
