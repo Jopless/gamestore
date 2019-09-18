@@ -18,3 +18,4 @@ def game_page(request, game_id): # Products page
     }
     return render(request, 'Shop/game_page.html', context)
 
+
