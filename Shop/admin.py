@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from Shop.models import Game
+from Shop.models import Game, Comments
 
 
 class GameAdmin(admin.ModelAdmin):
@@ -11,3 +11,4 @@ class GameAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Game, GameAdmin)
+admin.site.register(Comments)

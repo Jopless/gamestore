@@ -2,7 +2,6 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from Shop.models import Game
 
-
 def index(request):  # Checking homepage
     games = Game.objects.all().filter(is_published=True)
     context = {
