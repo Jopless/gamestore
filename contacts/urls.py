@@ -8,4 +8,5 @@ urlpatterns = [
     path('links/', views.socbutton, name='links'),
     path('email/', view_email, name='email'),
     path('success/', view_success, name='success'),
+    path('about/', views.about, name='about')
 ]
