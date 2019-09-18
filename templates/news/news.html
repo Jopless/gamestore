@@ -5,7 +5,18 @@
 
 <div class="container">
     <div class="row">
-
+        <div class="mx-auto">
+            {% for single_news in news  %}
+                <br>
+                <div class="card">
+                    <a href="{% url 'news_page' single_news.id %}"><div class="card-header"><h3>{{ single_news.title }}</h3></div></a>
+                    <div class="card-body">
+                        <img style="width: 400px;" src="{{ single_news.image.url }}" alt="">
+                    </div>
+                    <div class="card-footer">Published: {{ single_news.publish_date|naturaltime }}</div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 </div>
 

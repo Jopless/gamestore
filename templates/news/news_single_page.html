@@ -2,14 +2,14 @@
 
 {% block content %}
 <div class="container">
-    <div class="card-body">
-            <div class="news-details">
+    <div class="row">
+        <div class="mx-auto">
                 <h1 class="text-lg-center">{{ news_page.title }}</h1><br>
-                <img src="{{ news_page.image.url }}" alt=""/>
+                <img class="rounded" style="width: 500px;" src="{{ news_page.image.url }}" alt=""/>
                 <br>
                 <br>
                 <p class="text-justify">{{ news_page.text }}</p>
-            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
