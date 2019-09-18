@@ -43,6 +43,17 @@
 
   </div>
   <!-- /.row -->
+        <h3 class="my-4">Comments</h3>
+        <hr>
+        {% for comment in game_page.comments.all %}
+            <div class="comment">
+                <strong>{{ comment.author }} said {{ comment.created_date|naturalday }}: </strong>
+                <p>{{ comment.text|linebreaks }}</p>
+            </div>
+        {% empty %}
+            <p>No comments here yet :(</p>
+        {% endfor %}
 
-</div>
+    </div>
+
 {% endblock %}
