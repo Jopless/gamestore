@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="container">
+    <div class="row">
+        <div class="mx-auto">
+            <h1 class="display-4">Welcome to our about page!</h1>
+
+            <h4> Hello Stranger! </h4>
+                <p>
+                    This project is made by two jobless brothers,
+                    hope soon we will get a job, but looks like not this day.
+                </p>
+                <p>Here you can check some awesome games from our childhood, bet you have played them. Also:
+            <ul>
+                <li>
+                    <p>
+                    <a href="http://127.0.0.1:8000/email/">Сontact Us</a>
+                    </p>
+                </li>
+                <li>
+                    <p>Check out our
+                        <a href="http://127.0.0.1:8000/links/">
+                        Social media</a>
+                    </p>
+                </li>
+                <li>
+                    <p>Create your own
+                        <a href="http://127.0.0.1:8000/accounts/register/">Account</a>
+                    </p>
+                </li>
+                <li>
+                    <p>Watch some cool
+                        <a href="http://127.0.0.1:8000/news/">News</a>
+                    </p>
+                </li>
+            </ul>
+                </p>
+                <p> It took 9 days to make this project from 0, hope you enjoy it!</p>
+                <p>
+                As well, you can check out our CV:
+                <ul>
+                    <li>
+                        <a href="https://www.visualcv.com/app/#/cvs/5159071">Ruslan_CV</a>
+                    </li>
+                    <li>
+                        <a href="https://kiev.hh.ua/resume/c5015a3dff072d80060039ed1f334b4f4b6379">Artem_CV</a>
+                    </li>
+                </ul>
+                </p>
+            <img src="{% static 'img/about.png' %}">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
