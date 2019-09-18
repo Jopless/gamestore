@@ -2,21 +2,10 @@
 {% load humanize %}
 
 {% block content %}
+
 <div class="container">
     <div class="row">
-       <div class="mx-auto">
-           {% for new in news %}
-               <br>
-           <div class="card">
-               <img src="{{ new.image.url }}" class="card-img-top" alt="">
-               <div class="card-body">
-                   <h3 class="card-title">{{ new.title }}</h3>
-                   <p>Posted {{ new.publish_date|naturaltime }}</p>
-                   <a href="{% url 'news_page' new.id %}" class="btn btn-primary">Read more...</a>
-               </div>
-           </div>
-           {% endfor %}
-       </div>
+
     </div>
 </div>
 

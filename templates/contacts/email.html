@@ -1,12 +1,47 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Contact Us</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <div class="form-actions">
-      <button type="submit" class="btn btn-primary btn-lg">Send</button>
+
+<div class="container">
+    <div class="row">
+        <div class="mx-auto">
+            <div class="card">
+                <div class="card-header bd-primary text-black">
+                    <h4><i class="fas fa-user-plus"></i>Contact us!</h4>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div class="form-group">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <div class="form-actions">
+                              <button type="submit" class="btn btn-primary btn-lg">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-</form>
+</div>
+
 {% endblock %}
+
+<div class="container">
+    <div class="row">
+        <div class="mx-auto">
+            <div class="card">
+                <div class="card-header bd-primary text-black">
+                    <h4><i class="fas fa-user-plus"></i>Registration</h4>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button class="btn btn-primary" type="submit">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
