@@ -36,8 +36,8 @@
                      <li class="nav-item {% if 'links' in request.path %} active {% endif %}">
                         <a class="nav-link" href="{% url 'links' %}">Links</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                    <li class="nav-item {% if 'about' in request.path %} active {% endif %}">
+                        <a class="nav-link" href="{% url 'about' %}">About</a>
                     </li>
                     <li class="nav-item {% if 'email' in request.path %} active {% endif %}">
                         <a class="nav-link" href="{% url 'email' %}">Contact Me</a>
