@@ -4,6 +4,10 @@ from django.shortcuts import render, redirect
 from .forms import ContactForm
 
 
+def about(request):
+    return render(request, 'about/about.html')
+
+
 def socbutton(request):
     return render(request, 'contacts/socialbutton.html')
 
